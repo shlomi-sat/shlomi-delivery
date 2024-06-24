@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shlomi Delivery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header, footer {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #2980b9;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background-color: #1abc9c;
+        }
+        .container {
+            padding: 20px;
+        }
+        .services, .contact, .about {
+            margin: 20px 0;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .contact a, .contact p {
+            margin: 10px 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #2980b9;
+        }
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shlomi Delivery</h1>
+        <p>Reliable and Professional Delivery Services</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a id="aboutBtn" href="#about">About Us</a></li>
+            <li><a id="contactBtn" href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="home">
+            <h2>Welcome to Shlomi Delivery</h2>
+            <p>We offer a wide range of delivery and distribution services across the country. We are committed to providing fast, reliable, and professional service, with an emphasis on excellent customer experience.</p>
+            <p>Our services are known for their high quality, reliability, punctuality, and professionalism. We have been serving our clients with dedication for 7 years, ensuring that every delivery is handled with care and efficiency.</p>
+        </section>
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Express Deliveries</li>
+                <li>Legal Deliveries</li>
+                <li>Small and Large Moves</li>
+                <li>Distribution Services</li>
+                <li>Parcel Delivery</li>
+                <li>Same-Day Delivery</li>
+                <li>Scheduled Deliveries</li>
+                <li>Overnight Shipping</li>
+                <li>Bulk Shipment</li>
+                <li>Temperature-Controlled Deliveries</li>
+                <li>Document Delivery</li>
+                <li>Fragile Items Delivery</li>
+            </ul>
+        </section>
+        <section id="contactForm" class="contact">
+            <h2>Contact Us</h2>
+            <form action="mailto:shlomi.p10@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name (Required):</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Phone (Required):</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="comments">Comments (Required):</label>
+                <textarea id="comments" name="comments" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Shlomi Delivery. All rights reserved.</p>
+    </footer>
+
+    <!-- The Modal for About -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="aboutClose">&times;</span>
+            <h2>About Us</h2>
+            <p>Shlomi Delivery has been providing reliable and professional delivery services for 7 years. With a skilled and professional team, we ensure the best service for our clients.</p>
+        </div>
+    </div>
+
+    <!-- The Modal for Contact -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="contactClose">&times;</span>
+            <h2>Contact Us</h2>
+            <p>Phone: <a href="tel:0502638644">050-2638644</a></p>
+            <p>Email: <a href="mailto:shlomi.p10@gmail.com">shlomi.p10@gmail.com</a></p>
+            <p>Address: HaRav Unterman 3, Petah Tikva, Israel</p>
+            <p><a href="https://wa.me/0502638644?text=I%20need%20a%20delivery%20service%20please%20contact%20me." target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">Chat with us on WhatsApp</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Get the modals
+        var aboutModal = document.getElementById("aboutModal");
+        var contactModal = document.getElementById("contactModal");
+
+        // Get the buttons that open the modals
+        var aboutBtn = document.getElementById("aboutBtn");
+        var contactBtn = document.getElementById("contactBtn");
+
+        // Get the <span> elements that close the modals
+        var aboutClose = document.getElementById("aboutClose");
+        var contactClose = document.getElementById("contactClose");
+
+        // When the user clicks the button, open the modal 
+        aboutBtn.onclick = function() {
+            aboutModal.style.display = "block";
+        }
+        contactBtn.onclick = function() {
+            contactModal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        aboutClose.onclick = function() {
+            aboutModal.style.display = "none";
+        }
+        contactClose.onclick = function() {
+            contactModal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == aboutModal) {
+                aboutModal.style.display = "none";
+            }
+            if (event.target == contactModal) {
+                contactModal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
