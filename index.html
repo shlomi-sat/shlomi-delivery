@@ -125,34 +125,21 @@
             margin: 20px 0;
             border-radius: 15px;
         }
-        .floating-whatsapp {
+        .floating-icon {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            z-index: 100;
             width: 50px;
             height: 50px;
-            z-index: 100;
+            cursor: pointer;
         }
-
-
+        .floating-whatsapp {
+            right: 80px;
+        }
+        .floating-review {
+            right: 20px;
+        }
     </style>
-<style>
-    .floating-icon {
-        position: fixed;
-        bottom: 20px;
-        z-index: 100;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-    }
-    .floating-whatsapp {
-        right: 80px;
-    }
-    .floating-review {
-        right: 20px;
-    }
-</style>
-
 </head>
 <body>
     <header>
@@ -219,6 +206,7 @@
             <p>Shlomi Delivery has been providing reliable and professional delivery services for 7 years. With a skilled and professional team, we ensure the best service for our clients.</p>
         </div>
     </div>
+
     <!-- The Modal for Contact -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
@@ -231,7 +219,7 @@
         </div>
     </div>
 
-    <a href="https://wa.me/972502638644?text=I%20need%20a%20delivery%20service%20please%20contact%20me." class="floating-whatsapp" target="_blank">
+    <a href="https://wa.me/972502638644?text=I%20need%20a%20delivery%20service%20please%20contact%20me." class="floating-icon floating-whatsapp" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 
@@ -283,8 +271,12 @@
 </a>
 
 <a href="https://g.page/r/CWQ2boX-b6ZxEAI/review" class="floating-icon floating-review" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Google_Review.png" alt="Google Review">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Star_icon_stylized.svg/768px-Star_icon_stylized.svg.png" alt="Google Review" style="width: 50px; height: 50px;">
 </a>
+
+
+
+
 
 </body>
 </html>
