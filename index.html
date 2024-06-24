@@ -167,14 +167,14 @@
         </section>
         <section id="contactForm" class="contact">
             <h2>Contact Us</h2>
-            <form action="mailto:shlomi.p10@gmail.com" method="post" enctype="text/plain">
+            <form action="process_form.php" method="post">
                 <label for="name">Name (Required):</label>
                 <input type="text" id="name" name="name" required>
                 <label for="phone">Phone (Required):</label>
                 <input type="tel" id="phone" name="phone" required>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email">
-                <label for="comments">Comments (Required):</label>
+                <label for="comments">Subject (Required):</label>
                 <textarea id="comments" name="comments" required></textarea>
                 <button type="submit">Send</button>
             </form>
